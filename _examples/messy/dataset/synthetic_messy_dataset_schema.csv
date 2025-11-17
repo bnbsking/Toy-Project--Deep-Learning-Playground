@@ -1,0 +1,6 @@
+,type,is_category,lb,rb
+category,str,1,,
+quantity,int,0,0,50
+price,float,0,0,1000
+discount_pct,float,0,0,1
+total,float,0,0,100000

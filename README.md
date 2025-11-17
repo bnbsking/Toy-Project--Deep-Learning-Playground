@@ -63,3 +63,21 @@ python main.py --mode infer --cfg _examples/mnist/cfg.yaml
 # Design
 + modularization, reusability, extensibility, flexibility, Readability
 + see [main.py](./main.py) and [configs](./_examples/boston_housing/cfg.yaml) to view the workflow of this framework
+
+
+# Tabular Process
+1. load schema dataframe (type: str, lowerbound: float, upperbound: float, is_category: bool, categories: List[str])
+2. cell-level clean: for each column, perform customize func to each cell (Must for general / dirty data)
+    + for missing data, change to None
+3. col-level clean
+    + drop high missing col
+    + variance < epsilon
+    + highly correlated numeric columns
+4. row-level clean
+    + drop duplicate, outliers (if necessary), high missing rate
+    + joint features adding or filtering
+5. split to
+    + categorical data: one hot encoding, for missing category use "1/n" or random (follow raw distribution) for each cell
+    + numeric data: fill missing by mean or last (time series), record min/max and normalize
+    + concat them (axis=1) finally
+6. split to train, valid set

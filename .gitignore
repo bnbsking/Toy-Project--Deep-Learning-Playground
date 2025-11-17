@@ -1,11 +1,9 @@
 **/__pycache__/
 **/.ipynb_checkpoints/
-**/dataset/
-**/dataset_preprocessed/
 
 *.pt
 .DS_Store
-.poetry.lock
+poetry.lock
 
 .tmp/
 dist/
