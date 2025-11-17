@@ -2,6 +2,21 @@
 A space for experimenting with deep learning.
 
 
+# Installation
++ Docker image as in test.sh or test.ps1
+
++ Container for testing
+```bash
+bash env.sh
+source ~/.bashrc
+```
+
++ Directly use
+```bash
+pip install -e .
+```
+
+
 # Quick start
 + Tabular single regression
     + Dataset: [Boston Housing](https://www.kaggle.com/code/prasadperera/the-boston-housing-dataset/data)
