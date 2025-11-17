@@ -5,6 +5,7 @@
 
 *.pt
 .DS_Store
+.poetry.lock
 
 .tmp/
 dist/
